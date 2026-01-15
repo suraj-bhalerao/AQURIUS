@@ -120,7 +120,7 @@ const Contact = () => {
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Weekly Quantity (Approx)</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Weekly Quantity (in Boxes)</label>
                                     <input
                                         type="number"
                                         name="quantity"

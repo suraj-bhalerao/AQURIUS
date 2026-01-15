@@ -74,25 +74,11 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="hidden lg:block relative"
                 >
-                    <img src={heroImage} alt="Premium Custom Water Bottle" className="w-full max-w-[500px] mx-auto drop-shadow-2xl" />
+                    <img src={heroImage} alt="Premium Custom Water Bottle" className="w-full max-w-[500px] mx-auto drop-shadow-2xl rounded-3xl" />
                 </motion.div>
             </div>
 
-            {/* Scroll Indicator */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            >
-                <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center p-1">
-                    <motion.div
-                        animate={{ y: [0, 12, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}
-                        className="w-1.5 h-1.5 bg-gray-400 rounded-full"
-                    />
-                </div>
-            </motion.div>
+
         </section>
     );
 };

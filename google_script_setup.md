@@ -6,15 +6,14 @@ Follow these steps to connect your Contact Form to a Google Sheet.
 1. Go to [Google Sheets](https://sheets.google.com) and create a new **Blank spreadsheet**.
 2. Name it "Aquaress Leads" (or anything you like).
 3. In the first row (headers), add these exact column names:
-   - **A1**: Check
-   - **B1**: Date
-   - **C1**: Name
-   - **D1**: Location
-   - **E1**: Email
-   - **F1**: Mobile
-   - **G1**: Size
-   - **H1**: Quantity
-   - **I1**: Consent
+   - **A1**: Date
+   - **B1**: Name
+   - **C1**: Location
+   - **D1**: Email
+   - **E1**: Mobile
+   - **F1**: Size
+   - **G1**: Quantity
+   - **H1**: Consent
 
 ## Step 2: Add the Script
 1. In your Google Sheet, click **Extensions** > **Apps Script**.
@@ -46,8 +45,6 @@ function doPost(e) {
     const newRow = headers.map(function(header) {
       // Automatic timestamp for "Date" column
       if (header === 'Date') return new Date();
-      // "Check" column just to show it worked
-      if (header === 'Check') return '✅';
       
       // Match other columns to the form data keys
       // Keys: name, location, email, mobile, bottleSize, quantity, consent
