@@ -72,9 +72,9 @@ const Hero = () => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="hidden lg:block relative"
+                    className="relative flex justify-center"
                 >
-                    <img src={heroImage} alt="Premium Custom Water Bottle" className="w-full max-w-[500px] mx-auto drop-shadow-2xl rounded-3xl" />
+                    <img src={heroImage} alt="Premium Custom Water Bottle" className="w-full max-w-[400px] sm:max-w-[500px] mx-auto drop-shadow-2xl rounded-3xl" />
                 </motion.div>
             </div>
 
