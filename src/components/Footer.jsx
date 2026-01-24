@@ -21,7 +21,12 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-                    <p>&copy; {new Date().getFullYear()} AQURIUS. All rights reserved.</p>
+                    <div className="text-center md:text-left">
+                        <p>&copy; {new Date().getFullYear()} AQURIUS. All rights reserved.</p>
+                        <p className="mt-1 flex items-center justify-center md:justify-start gap-1">
+                            Made with <span className="text-red-500">❤️</span> for AQURIUS
+                        </p>
+                    </div>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

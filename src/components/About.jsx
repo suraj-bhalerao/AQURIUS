@@ -46,11 +46,11 @@ const About = () => {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[300px] sm:h-[450px] md:h-[600px]">
                             <img
                                 src={aboutImage} // Using local image
                                 alt="Modern Water Bottling Plant"
-                                className="w-full h-[600px] object-cover hover:scale-105 transition-transform duration-700"
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                             <div className="absolute bottom-6 left-6 text-white max-w-xs">
@@ -63,7 +63,7 @@ const About = () => {
                         <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl max-w-[200px] hidden md:block border border-gray-100">
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="text-4xl font-bold text-aqua-blue">
-                                    <Counter from={0} to={10} duration={2} />+ 
+                                    <Counter from={0} to={10} duration={2} />+
                                 </div>
                             </div>
                             <p className="text-sm text-gray-600 font-medium">Happy Clients Served</p>

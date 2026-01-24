@@ -51,85 +51,83 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 bg-blue-50">
+        <section id="contact" className="py-16 md:py-20 bg-blue-50">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                    <h2 className="text-aqua-blue font-bold tracking-wide uppercase text-sm mb-2">Get Started</h2>
-                    <h3 className="text-4xl font-heading font-bold text-ocean-dark">Request a Quote</h3>
+                <div className="text-center mb-10 md:mb-12">
+                    <h2 className="text-aqua-blue font-bold tracking-wide uppercase text-xs sm:text-sm mb-2">Get Started</h2>
+                    <h3 className="text-3xl md:text-4xl font-heading font-bold text-ocean-dark">Request a Quote</h3>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden">
+                <div className="bg-white rounded-2xl shadow-xl p-6 md:p-12 relative overflow-hidden">
                     {submitted ? (
-                        <div className="text-center py-20">
-                            <div className="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <CheckCircle className="w-10 h-10" />
+                        <div className="text-center py-16 md:py-20">
+                            <div className="w-16 h-16 md:w-20 md:h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <CheckCircle className="w-8 h-8 md:w-10 md:h-10" />
                             </div>
-                            <h4 className="text-3xl font-bold text-ocean-dark mb-4">Thank You!</h4>
-                            <p className="text-gray-600">Your request has been received. We will contact you shortly.</p>
+                            <h4 className="text-2xl md:text-3xl font-bold text-ocean-dark mb-4">Thank You!</h4>
+                            <p className="text-gray-600 text-sm md:text-base">Your request has been received. We will contact you shortly.</p>
                         </div>
                     ) : (
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1.5 md:mb-2">Full Name</label>
                                     <input
                                         type="text"
                                         name="name"
                                         required
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
+                                        className="w-full px-4 py-2.5 md:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all text-sm md:text-base"
                                         placeholder="Pramod Bhalerao"
                                         maxLength={20}
                                     />
-                                    {/* <p className="text-xs text-gray-500 mt-1">{formData.name.length}/20 characters (alphabets only)</p> */}
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Business Location</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1.5 md:mb-2">Business Location</label>
                                     <input
                                         type="text"
                                         name="location"
                                         required
                                         value={formData.location}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
+                                        className="w-full px-4 py-2.5 md:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all text-sm md:text-base"
                                         placeholder="City, Area"
                                     />
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1.5 md:mb-2">Email Address</label>
                                     <input
                                         type="email"
                                         name="email"
                                         required
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
+                                        className="w-full px-4 py-2.5 md:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all text-sm md:text-base"
                                         placeholder="name@company.com"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Mobile Number</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1.5 md:mb-2">Mobile Number</label>
                                     <input
                                         type="tel"
                                         name="mobile"
                                         required
                                         value={formData.mobile}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
+                                        className="w-full px-4 py-2.5 md:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all text-sm md:text-base"
                                         placeholder="9876543210"
                                         maxLength={10}
                                     />
-                                    {/* <p className="text-xs text-gray-500 mt-1">{formData.mobile.length}/10 digits</p> */}
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">500 ml - Weekly Quantity (in Boxes)</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1.5 md:mb-2 text-xs sm:text-sm">500 ml - Weekly Quantity (Boxes)</label>
                                     <input
                                         type="number"
                                         name="quantity500ml"
@@ -137,12 +135,12 @@ const Contact = () => {
                                         required
                                         value={formData.quantity500ml}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
-                                        placeholder="e.g. 50"
+                                        className="w-full px-4 py-2.5 md:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all text-sm md:text-base"
+                                        placeholder="Min 10"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">1 Litre - Weekly Quantity (in Boxes)</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1.5 md:mb-2 text-xs sm:text-sm">1 Litre - Weekly Quantity (Boxes)</label>
                                     <input
                                         type="number"
                                         name="quantity1L"
@@ -150,13 +148,13 @@ const Contact = () => {
                                         required
                                         value={formData.quantity1L}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
-                                        placeholder="e.g. 100"
+                                        className="w-full px-4 py-2.5 md:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all text-sm md:text-base"
+                                        placeholder="Min 10"
                                     />
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-3 mt-4">
+                            <div className="flex items-start gap-3 mt-2">
                                 <input
                                     type="checkbox"
                                     name="consent"
@@ -164,9 +162,9 @@ const Contact = () => {
                                     required
                                     checked={formData.consent}
                                     onChange={handleChange}
-                                    className="mt-1 w-5 h-5 text-aqua-blue rounded border-gray-300 focus:ring-aqua-blue"
+                                    className="mt-1 w-4 h-4 md:w-5 md:h-5 text-aqua-blue rounded border-gray-300 focus:ring-aqua-blue"
                                 />
-                                <label htmlFor="consent" className="text-sm text-gray-600">
+                                <label htmlFor="consent" className="text-xs md:text-sm text-gray-600">
                                     I consent to having this website store my submitted information so they can respond to my inquiry.
                                 </label>
                             </div>
@@ -174,7 +172,7 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full bg-aqua-blue text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:bg-sky-blue hover:shadow-xl transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                className="w-full bg-aqua-blue text-white font-bold text-base md:text-lg py-3.5 md:py-4 rounded-xl shadow-lg hover:bg-sky-blue hover:shadow-xl transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-4"
                             >
                                 {loading ? <Loader2 className="w-6 h-6 animate-spin" /> : <>Send Request <Send className="w-5 h-5" /></>}
                             </button>

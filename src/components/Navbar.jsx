@@ -60,15 +60,15 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white border-t border-gray-100"
+                        className="md:hidden bg-white border-t border-gray-100 absolute left-0 right-0 top-full shadow-lg"
                     >
-                        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <div className="px-4 pt-2 pb-6 space-y-1">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-gray-600 hover:text-aqua-blue block px-3 py-2 rounded-md text-base font-medium"
+                                    className="text-gray-600 hover:text-aqua-blue block px-3 py-3 rounded-md text-base font-medium border-b border-gray-50"
                                 >
                                     {link.name}
                                 </a>
@@ -76,7 +76,7 @@ const Navbar = () => {
                             <a
                                 href="#contact"
                                 onClick={() => setIsOpen(false)}
-                                className="w-full text-center block bg-aqua-blue text-white mt-4 px-5 py-3 rounded-lg font-medium"
+                                className="w-full text-center block bg-aqua-blue text-white mt-6 px-5 py-4 rounded-xl font-bold shadow-md"
                             >
                                 Get Custom Quote
                             </a>
