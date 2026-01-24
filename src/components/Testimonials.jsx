@@ -6,18 +6,18 @@ const Testimonials = () => {
     const testimonials = [
         {
             text: "The custom bottles from AQURIUS elevated our hotel's branding significantly. Guests love the premium feel!",
-            author: "Pramod Bhalerao",
-            role: "General Manager, Poms Hotel"
+            author: "Harish Shetty",
+            role: "Owner, Hotel Pancharatna"
         },
         {
             text: "Fast delivery, crystal clear water, and the label print quality is unmatched. Highly recommended for corporate events.",
-            author: "Sushrut Pawale",
-            role: "CEO, Elite Enterprices"
+            author: "Santosh Dhumal",
+            role: "Owner, Hotel Ranwara"
         },
         {
             text: "We switched to AQURIUS for our restaurant chain. The consistency in quality and service is impressive.",
-            author: "Suraj",
-            role: "Owner, Restaurant"
+            author: "Sushrut Pawale",
+            role: "Owner, Raswanti Gruh"
         }
     ];
 
