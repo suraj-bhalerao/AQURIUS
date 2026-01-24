@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, FileText } from 'lucide-react';
+import { MessageCircle, Bot } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FloatingActions = () => {
@@ -28,7 +28,7 @@ const FloatingActions = () => {
                     className="fixed bottom-6 right-6 z-40 flex flex-col gap-4"
                 >
                     <a
-                        href="https://wa.me/919999999999" // Replace with actual number
+                        href="https://wa.me/918830951567" // Replace with actual number
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform hover:scale-110 flex items-center justify-center group"
@@ -38,14 +38,14 @@ const FloatingActions = () => {
                         <span className="absolute right-full mr-3 bg-white text-gray-800 px-3 py-1 rounded-lg text-sm font-bold shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Chat with us</span>
                     </a>
 
-                    <a
+                    {/* <a
                         href="#contact"
                         className="bg-aqua-blue text-white p-4 rounded-full shadow-lg hover:bg-sky-blue transition-transform hover:scale-110 flex items-center justify-center group"
-                        title="Request Quote"
+                        title="Get Help from Bot"
                     >
-                        <FileText className="w-6 h-6" />
-                        <span className="absolute right-full mr-3 bg-white text-gray-800 px-3 py-1 rounded-lg text-sm font-bold shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Request Quote</span>
-                    </a>
+                        <Bot className="w-6 h-6" />
+                        <span className="absolute right-full mr-3 bg-white text-gray-800 px-3 py-1 rounded-lg text-sm font-bold shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Get Help</span>
+                    </a> */}
                 </motion.div>
             )}
         </AnimatePresence>

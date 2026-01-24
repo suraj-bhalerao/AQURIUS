@@ -37,7 +37,7 @@ const Gallery = () => {
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <p className="text-white font-bold tracking-wider">VIEW PROJECT</p>
+                                {/* <p className="text-white font-bold tracking-wider">VIEW PROJECT</p> */}
                             </div>
                         </motion.div>
                     ))}

@@ -17,18 +17,18 @@ const Location = () => {
                             <h4 className="text-2xl font-bold text-ocean-dark mb-4">AQURIUS HQ</h4>
                             <div className="flex items-start gap-4 text-gray-600">
                                 <MapPin className="w-6 h-6 text-aqua-blue flex-shrink-0 mt-1" />
-                                <p>123 Crystal Water Park, <br />Industrial Zone, Sector 4, <br />Cityville, State 400001</p>
+                                <p>HNO 994, Near Pune-Nashik Highway, Peth<br /> Tal - Ambegaon, Dist - Pune,<br /> Pin- Code : 410512</p>
                             </div>
                         </div>
 
                         <div className="space-y-4">
                             <div className="flex items-center gap-4 text-gray-600">
                                 <Phone className="w-6 h-6 text-aqua-blue flex-shrink-0" />
-                                <p>+91 98765 43210</p>
+                                <p>+91 88309 51567 <br /> +91 92098 36852</p>
                             </div>
                             <div className="flex items-center gap-4 text-gray-600">
                                 <Mail className="w-6 h-6 text-aqua-blue flex-shrink-0" />
-                                <p>hello@aqurius.com</p>
+                                <p>business@aqurius.com</p>
                             </div>
                             <div className="flex items-center gap-4 text-gray-600">
                                 <Clock className="w-6 h-6 text-aqua-blue flex-shrink-0" />
@@ -39,7 +39,7 @@ const Location = () => {
                         <div className="pt-4">
                             <h5 className="font-bold text-ocean-dark mb-2">Service Areas</h5>
                             <div className="flex flex-wrap gap-2">
-                                {['Metropolitan City', 'Suburbs', 'North District', 'West Valley'].map(area => (
+                                {['Peth', 'Manchar', 'Rajgurunagar', 'Narayangaon', 'Junnar'].map(area => (
                                     <span key={area} className="bg-white border border-gray-200 px-3 py-1 rounded-full text-sm text-gray-600">
                                         {area}
                                     </span>
@@ -52,7 +52,7 @@ const Location = () => {
                     <div className="h-[400px] lg:h-auto w-full bg-gray-200 relative">
                         <iframe
                             title="Google Map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.183948695029!2d-73.9859560845936!3d40.74844057932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15096.065925446957!2d73.91288267164549!3d18.930664613158655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd34126216fa53%3A0xc18b52f202446fd!2sPeth%2C%20Maharashtra%20410512!5e0!3m2!1sen!2sin!4v1769252523711!5m2!1sen!2sin"
                             className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
                             allowFullScreen=""
                             loading="lazy"

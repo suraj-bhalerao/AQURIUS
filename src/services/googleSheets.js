@@ -9,7 +9,8 @@
  * 5. Paste the Deployment URL below.
  */
 
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwGgdiDTF5vCOl9328Ev2XN35swcrxIwukD3lbEjllSeAkY-C5MyX0fJujrQian-_A5/exec'; 
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwGgdiDTF5vCOl9328Ev2XN35swcrxIwukD3lbEjllSeAkY-C5MyX0fJujrQian-_A5/exec';
+// https://script.google.com/macros/s/AKfycbwGgdiDTF5vCOl9328Ev2XN35swcrxIwukD3lbEjllSeAkY-C5MyX0fJujrQian-_A5/exec
 
 export const submitToGoogleSheets = async (data) => {
     // If URL is still the placeholder, return warning
@@ -19,14 +20,19 @@ export const submitToGoogleSheets = async (data) => {
     }
 
     try {
+        console.log('Submitting data to Google Sheets:', data);
+
         const response = await fetch(SCRIPT_URL, {
             method: 'POST',
             body: JSON.stringify(data),
             mode: 'no-cors', // Important for Google Apps Script to avoid CORS errors
             headers: {
-                'Content-Type': 'text/plain;charset=utf-8' // explicit text/plain avoids preflight
+                // 'Content-Type': 'text/plain;charset=utf-8' // explicit text/plain avoids preflight
+                'Content-Type': 'application/json;charset=utf-8'
             }
         });
+
+        console.log('Response received:', response.status);
         // With no-cors, we get an opaque response, but it usually means it went through if no error thrown.
         return { success: true };
     } catch (error) {

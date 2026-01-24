@@ -8,8 +8,8 @@ const Contact = () => {
         location: '',
         email: '',
         mobile: '',
-        bottleSize: '500ml',
-        quantity: '',
+        quantity500ml: '',
+        quantity1L: '',
         consent: false
     });
     const [loading, setLoading] = useState(false);
@@ -17,10 +17,27 @@ const Contact = () => {
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: type === 'checkbox' ? checked : value
-        }));
+
+        if (name === 'name') {
+            // Allow only alphabets and spaces, max 20 characters
+            const validName = value.replace(/[^a-zA-Z\s]/g, '').slice(0, 20);
+            setFormData(prev => ({
+                ...prev,
+                [name]: validName
+            }));
+        } else if (name === 'mobile') {
+            // Allow only digits, max 10
+            const validMobile = value.replace(/\D/g, '').slice(0, 10);
+            setFormData(prev => ({
+                ...prev,
+                [name]: validMobile
+            }));
+        } else {
+            setFormData(prev => ({
+                ...prev,
+                [name]: type === 'checkbox' ? checked : value
+            }));
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -62,8 +79,10 @@ const Contact = () => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
-                                        placeholder="John Doe"
+                                        placeholder="Pramod Bhalerao"
+                                        maxLength={20}
                                     />
+                                    {/* <p className="text-xs text-gray-500 mt-1">{formData.name.length}/20 characters (alphabets only)</p> */}
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">Business Location</label>
@@ -89,7 +108,7 @@ const Contact = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
-                                        placeholder="john@company.com"
+                                        placeholder="name@company.com"
                                     />
                                 </div>
                                 <div>
@@ -101,35 +120,38 @@ const Contact = () => {
                                         value={formData.mobile}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
-                                        placeholder="+91 98765 43210"
+                                        placeholder="9876543210"
+                                        maxLength={10}
                                     />
+                                    {/* <p className="text-xs text-gray-500 mt-1">{formData.mobile.length}/10 digits</p> */}
                                 </div>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Bottle Size</label>
-                                    <select
-                                        name="bottleSize"
-                                        value={formData.bottleSize}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all bg-white"
-                                    >
-                                        <option value="500ml">500 ml</option>
-                                        <option value="1L">1 Litre</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Weekly Quantity (in Boxes)</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">500 ml - Weekly Quantity (in Boxes)</label>
                                     <input
                                         type="number"
-                                        name="quantity"
-                                        required
+                                        name="quantity500ml"
                                         min="10"
-                                        value={formData.quantity}
+                                        required
+                                        value={formData.quantity500ml}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
-                                        placeholder="e.g. 500"
+                                        placeholder="e.g. 50"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">1 Litre - Weekly Quantity (in Boxes)</label>
+                                    <input
+                                        type="number"
+                                        name="quantity1L"
+                                        min="10"
+                                        required
+                                        value={formData.quantity1L}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-aqua-blue focus:border-transparent outline-none transition-all"
+                                        placeholder="e.g. 100"
                                     />
                                 </div>
                             </div>

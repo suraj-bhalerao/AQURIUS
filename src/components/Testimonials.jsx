@@ -11,12 +11,12 @@ const Testimonials = () => {
         },
         {
             text: "Fast delivery, crystal clear water, and the label print quality is unmatched. Highly recommended for corporate events.",
-            author: "Sarah Jenkins",
+            author: "Anita Desai",
             role: "Event Coordinator, TechSummit"
         },
         {
             text: "We switched to AQURIUS for our restaurant chain. The consistency in quality and service is impressive.",
-            author: "Michael Chen",
+            author: "Vikram Singh",
             role: "Owner, Zen Dining"
         }
     ];

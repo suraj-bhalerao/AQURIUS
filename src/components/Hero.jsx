@@ -29,7 +29,7 @@ const Hero = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-5xl md:text-7xl font-heading font-extrabold text-ocean-dark tracking-tight mb-6 leading-tight"
                     >
-                        Pure Water. <br />
+                        Our Bottle. <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-blue to-sky-blue">
                             Your Brand.
                         </span>
@@ -49,7 +49,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
-                        className="flex flex-col sm:flex-row gap-4 justify-center"
+                        className="flex flex-col sm:flex-row gap-4 "
                     >
                         <a
                             href="#contact"
@@ -58,12 +58,12 @@ const Hero = () => {
                             Get Custom Bottles
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </a>
-                        <a
+                        {/* <a
                             href="#contact"
                             className="bg-white text-ocean-dark border-2 border-ocean-dark/10 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors flex items-center justify-center"
                         >
                             Request a Quote
-                        </a>
+                        </a> */}
                     </motion.div>
                 </div>
 

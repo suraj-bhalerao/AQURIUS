@@ -54,7 +54,7 @@ const About = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                             <div className="absolute bottom-6 left-6 text-white max-w-xs">
-                                <p className="font-bold text-lg">Since 2024</p>
+                                <p className="font-bold text-lg">Since 2026</p>
                                 <p className="text-sm opacity-90">Delivering purity and trust across the region.</p>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ const About = () => {
                         <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl max-w-[200px] hidden md:block border border-gray-100">
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="text-4xl font-bold text-aqua-blue">
-                                    <Counter from={0} to={10} duration={2} />k+
+                                    <Counter from={0} to={10} duration={2} />+ 
                                 </div>
                             </div>
                             <p className="text-sm text-gray-600 font-medium">Happy Clients Served</p>
