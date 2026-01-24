@@ -14,7 +14,7 @@ const Gallery = () => {
         galleryEvent,
         galleryFactory,
         galleryRestaurant,
-        galleryDelivery,
+        galleryDelivery, // here is images
     ];
 
     return (
