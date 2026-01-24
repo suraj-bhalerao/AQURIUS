@@ -1,15 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import galleryImage1 from '../assets/gallery_1.png'; // Local asset
+import galleryImage1 from '../assets/gallery_1.png';
+import galleryHotel from '../assets/gallery_hotel.png';
+import galleryEvent from '../assets/gallery_event.png';
+import galleryFactory from '../assets/gallery_factory.png';
+import galleryRestaurant from '../assets/gallery_restaurant.png';
+import galleryDelivery from '../assets/gallery_delivery.png';
 
 const Gallery = () => {
     const images = [
         galleryImage1,
-        "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1616118132534-381148898bb8?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1546743391-7fef481545e8?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1536768138796-3c91cf881470?q=80&w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1625708462887-190470c1e838?q=80&w=800&auto=format&fit=crop",
+        galleryHotel,
+        galleryEvent,
+        galleryFactory,
+        galleryRestaurant,
+        galleryDelivery,
     ];
 
     return (
