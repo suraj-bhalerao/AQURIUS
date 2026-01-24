@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
 import { submitToGoogleSheets } from '../services/googleSheets';
+import { saveToDB } from '../services/dbService';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -44,10 +45,20 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
 
-        await submitToGoogleSheets(formData);
+        try {
+            // Run both submissions in parallel
+            const [gsResult, dbResult] = await Promise.all([
+                submitToGoogleSheets(formData),
+                saveToDB(formData)
+            ]);
 
-        setLoading(false);
-        setSubmitted(true);
+            console.log('Submission Results:', { googleSheets: gsResult, database: dbResult });
+        } catch (error) {
+            console.error('Submission Error:', error);
+        } finally {
+            setLoading(false);
+            setSubmitted(true);
+        }
     };
 
     return (
