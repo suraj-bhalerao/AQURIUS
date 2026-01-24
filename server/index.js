@@ -76,6 +76,7 @@ app.get('/api/enquiries', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => console.log(`Running on ${PORT}`));
+}
+export default app;
