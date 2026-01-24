@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Droplet } from 'lucide-react';
-import heroImage from '../assets/hero_bottle.png'; // Updated local asset
+import heroImage from '../assets/hero_bottles_combo.png'; // New combo bottles image
 
 const Hero = () => {
     return (
