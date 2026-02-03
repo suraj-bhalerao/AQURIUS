@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const FloatingActions = () => {
     const [isVisible, setIsVisible] = useState(false);
 
+    // demo ssh change
     useEffect(() => {
         const toggleVisibility = () => {
             if (window.scrollY > 300) {
