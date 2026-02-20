@@ -1,4 +1,4 @@
-# Aquaress
+# Aquaress -- 
 
 A modern, responsive website for Aquaress, a premium bottled water company. Built with React for the frontend and Express.js for the backend, featuring a sleek design with Tailwind CSS and smooth animations powered by Framer Motion.
 
@@ -156,3 +156,9 @@ This project is private and proprietary.
 ## Contact
 
 For questions or support, please contact the development team.
+## Repository Notes
+
+- Last reviewed: 2026-02-20
+- Scope: learning and practice focused implementation
+- Suggested next update: add setup/run steps for new contributors
+
